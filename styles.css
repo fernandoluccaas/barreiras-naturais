@@ -267,6 +267,7 @@ p{
 
     .carousel-track {
         height: 15rem; 
+        margin-bottom: 10%;
     }
     
     .carousel-item.prev-slide,
@@ -276,5 +277,6 @@ p{
     }
 
 }
+
 
 
