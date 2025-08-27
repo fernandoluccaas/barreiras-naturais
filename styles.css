@@ -65,6 +65,9 @@ p{
     width: 50%;
     border-radius: 0.5rem;
 }
+#vegetacoes{
+    margin-top: 5%
+}
 
 .sessoes{
     margin: 10% 15%;
@@ -233,6 +236,10 @@ p{
         margin-left: 5%;
         margin-right: 5%;
     }
+
+    #vegetacoes{
+        margin-top: 5%;
+    }
     
     .sessoes{
         margin-top: 20%;
@@ -267,4 +274,5 @@ p{
         opacity: 0;
         transform: scale(0.7);
     }
+
 }
