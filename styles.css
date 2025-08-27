@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    background-image: radial-gradient(#08dfb0,#026842);
+    color: white;
+    font-size: 1rem;
+}
+
+header {
+    margin: 1% 15%;
+    display: flex;
+    align-items: center;
+    gap: 3.125rem; 
+    justify-content: space-between;
+}
+
+h2{
+    font-family: "Fira Code", monospace;
+    font-weight: 500; 
+}
+
+p{
+    font-family: "Fira Code", monospace;
+    font-weight: 400; 
+}
+
+.bn-logo{
+    width: 6.25rem;
+}
+
+.cabecalho {
+    display: flex;
+    gap: 7.8125rem; 
+    font-family: "Fira Code", monospace;
+    font-weight: 500; 
+    font-size: 1rem; 
+}
+
+.cabecalho-botao{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.main{
+    display: flex;
+    margin: 5% 15%;
+    justify-content: center;
+}
+
+.banner {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.banner-img{
+    width: 50%;
+    border-radius: 0.5rem;
+}
+
+.sessoes{
+    margin: 10% 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5625rem; 
+}
+
+.sessoes-content{
+    display: flex;
+    gap: 3.125rem; 
+}
+
+.titulo-sessoes{
+    color: gold;
+    font-family: "Fira Code", monospace;
+    font-weight: 600; 
+    font-size: 2rem;
+}
+
+.sessoes-texto{
+    width: 50%;
+}
+
+.sessoes-imagem{
+    width: 50%;
+
+}
+
+.sessoes-imagem-img{
+    max-width: 95%;
+    max-height: 90%;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 56.25rem;
+    margin: 3.75rem auto;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 21.875rem; 
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.7);
+    z-index: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    border-radius: 0.5rem;
+    box-shadow: 0 0.313rem 1.25rem rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item.current-slide {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 3; 
+}
+
+.carousel-item.prev-slide {
+    opacity: 0.5;
+    transform: translateX(-55%) scale(0.8);
+    z-index: 2;
+}
+
+.certificados-botao {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.125rem; 
+}
+
+.certificados-botao img {
+    width: 1rem; 
+    height: 1rem; 
+    transition: transform 0.3s ease;
+    filter: brightness(0) saturate(100%) invert(69%) sepia(12%) saturate(834%) hue-rotate(63deg) brightness(93%) contrast(88%);
+}
+
+.carousel-item.next-slide {
+    opacity: 0.5;
+    transform: translateX(55%) scale(0.8);
+    z-index: 2;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 2.75rem;
+    height: 2.75rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev-button { left: 0.625rem; }
+.next-button { right: 0.625rem; }
+
+.carousel-nav {
+    position: absolute;
+    bottom: -2.5rem; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.625rem;
+}
+
+.carousel-nav-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    border: none; padding: 0; cursor: pointer;
+}
+
+.rodape{
+    background-color: #026842;
+    padding: 24px;
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Fira Code", monospace;
+    font-weight: 400px;
+}
+
+.carousel-nav-dot.current-slide { background: var(--cor-secundaria); }
+
+
+/* ======================================================= */
+/* REGRAS DE RESPONSIVIDADE PARA MOBILE           */
+/* ======================================================= */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 2rem;
+        margin: 5% 5%; 
+    }
+
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .main,
+    .sessoes {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .sessoes{
+        margin-top: 20%;
+    }
+
+    .sessoes-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .sessoes-texto,
+    .sessoes-imagem {
+        width: 100%;
+        text-align: justify; 
+    }
+
+    .sessoes-imagem{
+        text-align: center;
+    }
+
+    .sessoes-imagem-img {
+        max-width: 100%;
+    }
+
+    .carousel-track {
+        height: 15rem; 
+    }
+    
+    .carousel-item.prev-slide,
+    .carousel-item.next-slide {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+}
