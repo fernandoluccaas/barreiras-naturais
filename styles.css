@@ -6,39 +6,39 @@
 
 body {
     height: 100vh;
-    background-color:#026842;
+    background-image: radial-gradient(#08dfb0,#026842);
     color: white;
-    font-size: 1rem; /* Convertido de 16px para 1rem */
+    font-size: 1rem;
 }
 
 header {
     margin: 1% 15%;
     display: flex;
     align-items: center;
-    gap: 3.125rem; /* Convertido de 50px para rem */
+    gap: 3.125rem; 
     justify-content: space-between;
 }
 
 h2{
     font-family: "Fira Code", monospace;
-    font-weight: 500; /* Corrigido: font-weight não usa px */
+    font-weight: 500; 
 }
 
 p{
     font-family: "Fira Code", monospace;
-    font-weight: 400; /* Corrigido: font-weight não usa px */
+    font-weight: 400; 
 }
 
 .bn-logo{
-    width: 6.25rem; /* Convertido de 100px para rem */
+    width: 6.25rem;
 }
 
 .cabecalho {
     display: flex;
-    gap: 7.8125rem; /* Convertido de 125px para rem */
+    gap: 7.8125rem; 
     font-family: "Fira Code", monospace;
-    font-weight: 500; /* Corrigido: font-weight não usa px */
-    font-size: 1rem; /* Convertido de 16px para 1rem */
+    font-weight: 500; 
+    font-size: 1rem; 
 }
 
 .cabecalho-botao{
@@ -63,7 +63,7 @@ p{
 
 .banner-img{
     width: 50%;
-    border-radius: 0.5rem; /* Convertido de 8px para rem */
+    border-radius: 0.5rem;
 }
 
 .sessoes{
@@ -72,16 +72,19 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5625rem; /* Convertido de 25px para rem */
+    gap: 1.5625rem; 
 }
 
 .sessoes-content{
     display: flex;
-    gap: 3.125rem; /* Convertido de 50px para rem */
+    gap: 3.125rem; 
 }
 
 .titulo-sessoes{
-    color: darkorange;
+    color: gold;
+    font-family: "Fira Code", monospace;
+    font-weight: 600; 
+    font-size: 2rem;
 }
 
 .sessoes-texto{
@@ -90,10 +93,12 @@ p{
 
 .sessoes-imagem{
     width: 50%;
+
 }
 
 .sessoes-imagem-img{
     max-width: 95%;
+    max-height: 90%;
 }
 
 .carousel-container {
@@ -143,12 +148,12 @@ p{
 .certificados-botao {
     display: flex;
     justify-content: center;
-    margin-top: 3.125rem; /* Convertido de 50px para rem */
+    margin-top: 3.125rem; 
 }
 
 .certificados-botao img {
-    width: 1rem; /* Convertido de 16px para rem */
-    height: 1rem; /* Convertido de 16px para rem */
+    width: 1rem; 
+    height: 1rem; 
     transition: transform 0.3s ease;
     filter: brightness(0) saturate(100%) invert(69%) sepia(12%) saturate(834%) hue-rotate(63deg) brightness(93%) contrast(88%);
 }
@@ -193,6 +198,15 @@ p{
     border: none; padding: 0; cursor: pointer;
 }
 
+.rodape{
+    background-color: #026842;
+    padding: 24px;
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Fira Code", monospace;
+    font-weight: 400px;
+}
+
 .carousel-nav-dot.current-slide { background: var(--cor-secundaria); }
 
 
@@ -202,21 +216,18 @@ p{
 
 @media screen and (max-width: 768px) {
 
-    /* Ajusta o cabeçalho para o formato de coluna e reduz margens */
     header {
         flex-direction: column;
         gap: 2rem;
         margin: 5% 5%; 
     }
 
-    /* Ajusta a lista de links da navegação para empilhar verticalmente */
     .cabecalho {
         flex-direction: column;
         align-items: center;
-        gap: 2rem; /* Reduz o espaçamento entre os links */
+        gap: 2rem;
     }
 
-    /* Ajusta margens gerais para telas menores */
     .main,
     .sessoes {
         margin-left: 5%;
@@ -227,21 +238,18 @@ p{
         margin-top: 20%;
     }
 
-    /* Faz o conteúdo das seções (texto e imagem) empilhar verticalmente */
     .sessoes-content {
         flex-direction: column;
         align-items: center;
         gap: 2rem;
     }
 
-    /* Faz o texto e a imagem ocuparem a largura total no layout de coluna */
     .sessoes-texto,
     .sessoes-imagem {
         width: 100%;
-        text-align: justify; /* Melhora a legibilidade do texto */
+        text-align: justify; 
     }
 
-    /* Centraliza a imagem dentro de sua div */
     .sessoes-imagem{
         text-align: center;
     }
@@ -250,12 +258,10 @@ p{
         max-width: 100%;
     }
 
-    /* Ajusta o carrossel para telas menores */
     .carousel-track {
-        height: 15rem; /* Altura menor para se adequar a telas verticais */
+        height: 15rem; 
     }
     
-    /* Em telas muito pequenas, os slides laterais podem ser escondidos */
     .carousel-item.prev-slide,
     .carousel-item.next-slide {
         opacity: 0;
